@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    File XML thống nhất có thể sử dụng với cả DTD và XSD
+    Để sử dụng với DTD: Uncomment dòng DOCTYPE và comment namespace
+    Để sử dụng với XSD: Uncomment namespace và comment DOCTYPE
+-->
+
+<!-- CHO DTD: Uncomment dòng này -->
+<!-- <!DOCTYPE TruongHoc SYSTEM "TruongHoc.dtd"> -->
+
+<!-- CHO XSD: Uncomment các dòng này -->
+<!-- <TruongHoc xmlns="http://www.truonghoc.edu.vn" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:schemaLocation="http://www.truonghoc.edu.vn TruongHoc.xsd"> -->
+
+<!-- CHO XML THUẦN: Sử dụng dòng này -->
+<TruongHoc>
+    <!-- NIÊN KHÓA -->
+    <NienKhoa>
+        <MaNienKhoa>1</MaNienKhoa>
+        <TenNienKhoa>2023-2024</TenNienKhoa>
+        <NamBatDau>2023</NamBatDau>
+        <NamKetThuc>2024</NamKetThuc>
+        <NgayBatDau>2023-09-05</NgayBatDau>
+        <NgayKetThuc>2024-05-31</NgayKetThuc>
+        <MoTa>Niên khóa học chính quy</MoTa>
+    </NienKhoa>
+    
+    <NienKhoa>
+        <MaNienKhoa>2</MaNienKhoa>
+        <TenNienKhoa>2024-2025</TenNienKhoa>
+        <NamBatDau>2024</NamBatDau>
+        <NamKetThuc>2025</NamKetThuc>
+        <NgayBatDau>2024-09-02</NgayBatDau>
+        <NgayKetThuc>2025-05-30</NgayKetThuc>
+        <MoTa>Niên khóa học chính quy</MoTa>
+    </NienKhoa>
+    
+    <NienKhoa>
+        <MaNienKhoa>3</MaNienKhoa>
+        <TenNienKhoa>2022-2023</TenNienKhoa>
+        <NamBatDau>2022</NamBatDau>
+        <NamKetThuc>2023</NamKetThuc>
+        <NgayBatDau>2022-09-05</NgayBatDau>
+        <NgayKetThuc>2023-05-31</NgayKetThuc>
+        <MoTa>Niên khóa học chính quy</MoTa>
+    </NienKhoa>
+    
+    <NienKhoa>
+        <MaNienKhoa>4</MaNienKhoa>
+        <TenNienKhoa>2021-2022</TenNienKhoa>
+        <NamBatDau>2021</NamBatDau>
+        <NamKetThuc>2022</NamKetThuc>
+        <NgayBatDau>2021-09-06</NgayBatDau>
+        <NgayKetThuc>2022-05-30</NgayKetThuc>
+        <MoTa>Niên khóa học chính quy</MoTa>
+    </NienKhoa>
+    
+    <NienKhoa>
+        <MaNienKhoa>5</MaNienKhoa>
+        <TenNienKhoa>2020-2021</TenNienKhoa>
+        <NamBatDau>2020</NamBatDau>
+        <NamKetThuc>2021</NamKetThuc>
+        <NgayBatDau>2020-09-07</NgayBatDau>
+        <NgayKetThuc>2021-05-31</NgayKetThuc>
+        <MoTa>Niên khóa học chính quy</MoTa>
+    </NienKhoa>
+    
+    <NienKhoa>
+        <MaNienKhoa>6</MaNienKhoa>
+        <TenNienKhoa>2019-2020</TenNienKhoa>
+        <NamBatDau>2019</NamBatDau>
+        <NamKetThuc>2020</NamKetThuc>
+        <NgayBatDau>2019-09-02</NgayBatDau>
+        <NgayKetThuc>2020-05-29</NgayKetThuc>
+        <MoTa>Niên khóa học chính quy</MoTa>
+    </NienKhoa>
+    
+    <NienKhoa>
+        <MaNienKhoa>7</MaNienKhoa>
+        <TenNienKhoa>2018-2019</TenNienKhoa>
+        <NamBatDau>2018</NamBatDau>
+        <NamKetThuc>2019</NamKetThuc>
+        <NgayBatDau>2018-09-03</NgayBatDau>
+        <NgayKetThuc>2019-05-30</NgayKetThuc>
+        <MoTa>Niên khóa học chính quy</MoTa>
+    </NienKhoa>
+    
+    <NienKhoa>
+        <MaNienKhoa>8</MaNienKhoa>
+        <TenNienKhoa>2017-2018</TenNienKhoa>
+        <NamBatDau>2017</NamBatDau>
+        <NamKetThuc>2018</NamKetThuc>
+        <NgayBatDau>2017-09-04</NgayBatDau>
+        <NgayKetThuc>2018-05-31</NgayKetThuc>
+        <MoTa>Niên khóa học chính quy</MoTa>
+    </NienKhoa>
+
+    <!-- KHỐI LỚP -->
+    <KhoiLop>
+        <MaKhoi>1</MaKhoi>
+        <TenKhoi>Khối 1</TenKhoi>
+        <DoTuoi>6</DoTuoi>
+        <MoTa>Khối lớp 1 - Tiểu học</MoTa>
+    </KhoiLop>
+    
+    <KhoiLop>
+        <MaKhoi>2</MaKhoi>
+        <TenKhoi>Khối 2</TenKhoi>
+        <DoTuoi>7</DoTuoi>
+        <MoTa>Khối lớp 2 - Tiểu học</MoTa>
+    </KhoiLop>
+    
+    <KhoiLop>
+        <MaKhoi>3</MaKhoi>
+        <TenKhoi>Khối 3</TenKhoi>
+        <DoTuoi>8</DoTuoi>
+        <MoTa>Khối lớp 3 - Tiểu học</MoTa>
+    </KhoiLop>
+    
+    <KhoiLop>
+        <MaKhoi>4</MaKhoi>
+        <TenKhoi>Khối 4</TenKhoi>
+        <DoTuoi>9</DoTuoi>
+        <MoTa>Khối lớp 4 - Tiểu học</MoTa>
+    </KhoiLop>
+    
+    <KhoiLop>
+        <MaKhoi>5</MaKhoi>
+        <TenKhoi>Khối 5</TenKhoi>
+        <DoTuoi>10</DoTuoi>
+        <MoTa>Khối lớp 5 - Tiểu học</MoTa>
+    </KhoiLop>
+    
+    <KhoiLop>
+        <MaKhoi>6</MaKhoi>
+        <TenKhoi>Khối 6</TenKhoi>
+        <DoTuoi>11</DoTuoi>
+        <MoTa>Khối lớp 6 - Trung học cơ sở</MoTa>
+    </KhoiLop>
+    
+    <KhoiLop>
+        <MaKhoi>7</MaKhoi>
+        <TenKhoi>Khối 7</TenKhoi>
+        <DoTuoi>12</DoTuoi>
+        <MoTa>Khối lớp 7 - Trung học cơ sở</MoTa>
+    </KhoiLop>
+    
+    <KhoiLop>
+        <MaKhoi>8</MaKhoi>
+        <TenKhoi>Khối 8</TenKhoi>
+        <DoTuoi>13</DoTuoi>
+        <MoTa>Khối lớp 8 - Trung học cơ sở</MoTa>
+    </KhoiLop>
+    
+    <KhoiLop>
+        <MaKhoi>9</MaKhoi>
+        <TenKhoi>Khối 9</TenKhoi>
+        <DoTuoi>14</DoTuoi>
+        <MoTa>Khối lớp 9 - Trung học cơ sở</MoTa>
+    </KhoiLop>
+
+    <!-- LỚP HỌC -->
+    <LopHoc>
+        <MaLop>101</MaLop>
+        <MaKhoi>1</MaKhoi>
+        <TenLop>1A</TenLop>
+        <SiSo>35</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P101</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>102</MaLop>
+        <MaKhoi>1</MaKhoi>
+        <TenLop>1B</TenLop>
+        <SiSo>32</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P102</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>201</MaLop>
+        <MaKhoi>2</MaKhoi>
+        <TenLop>2A</TenLop>
+        <SiSo>38</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P201</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>202</MaLop>
+        <MaKhoi>2</MaKhoi>
+        <TenLop>2B</TenLop>
+        <SiSo>36</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P202</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>301</MaLop>
+        <MaKhoi>3</MaKhoi>
+        <TenLop>3A</TenLop>
+        <SiSo>34</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P301</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>302</MaLop>
+        <MaKhoi>3</MaKhoi>
+        <TenLop>3B</TenLop>
+        <SiSo>33</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P302</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>401</MaLop>
+        <MaKhoi>4</MaKhoi>
+        <TenLop>4A</TenLop>
+        <SiSo>35</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P401</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>402</MaLop>
+        <MaKhoi>4</MaKhoi>
+        <TenLop>4B</TenLop>
+        <SiSo>37</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P402</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>501</MaLop>
+        <MaKhoi>5</MaKhoi>
+        <TenLop>5A</TenLop>
+        <SiSo>36</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P501</PhongHoc>
+    </LopHoc>
+    
+    <LopHoc>
+        <MaLop>502</MaLop>
+        <MaKhoi>5</MaKhoi>
+        <TenLop>5B</TenLop>
+        <SiSo>34</SiSo>
+        <DanhSachHS />
+        <PhongHoc>P502</PhongHoc>
+    </LopHoc>
+
+    <!-- PHỤ HUYNH -->
+    <PhuHuynh>
+        <MaPH>501</MaPH>
+        <HoTen>Nguyễn Văn Minh</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>123 Đường Lê Lợi, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0901234567</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>502</MaPH>
+        <HoTen>Trần Thị Hoa</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>456 Đường Nguyễn Huệ, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0912345678</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>503</MaPH>
+        <HoTen>Lê Văn Đức</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>789 Đường Điện Biên Phủ, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0923456789</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>504</MaPH>
+        <HoTen>Phạm Thị Lan</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>321 Đường Cách Mạng Tháng 8, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0934567890</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>505</MaPH>
+        <HoTen>Hoàng Văn Thành</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>654 Đường Lê Văn Việt, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0945678901</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>506</MaPH>
+        <HoTen>Võ Thị Hồng</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>987 Đường Nguyễn Văn Linh, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0956789012</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>507</MaPH>
+        <HoTen>Đặng Văn Sơn</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>147 Đường Tân Sơn Nhì, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0967890123</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>508</MaPH>
+        <HoTen>Bùi Thị Nga</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>258 Đường Lạc Long Quân, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0978901234</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>509</MaPH>
+        <HoTen>Ngô Văn Đức</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>369 Đường Phạm Văn Đồng, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0989012345</SoDienThoai>
+    </PhuHuynh>
+    
+    <PhuHuynh>
+        <MaPH>510</MaPH>
+        <HoTen>Đỗ Thị Mai</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>741 Đường Nguyễn Thị Thập, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0990123456</SoDienThoai>
+    </PhuHuynh>
+
+    <!-- HỌC SINH -->
+    <HocSinh>
+        <MaHS>1001</MaHS>
+        <MaPH>501</MaPH>
+        <MaLop>101</MaLop>
+        <HoTen>Nguyễn Minh An</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <Lop>1A</Lop>
+        <SoDienThoai>0901234567</SoDienThoai>
+        <NgaySinh>2018-03-15</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1002</MaHS>
+        <MaPH>502</MaPH>
+        <MaLop>101</MaLop>
+        <HoTen>Trần Minh Tuấn</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <Lop>1A</Lop>
+        <SoDienThoai>0912345678</SoDienThoai>
+        <NgaySinh>2018-07-22</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1003</MaHS>
+        <MaPH>503</MaPH>
+        <MaLop>102</MaLop>
+        <HoTen>Lê Thị Mai</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <Lop>1B</Lop>
+        <SoDienThoai>0923456789</SoDienThoai>
+        <NgaySinh>2018-05-10</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1004</MaHS>
+        <MaPH>504</MaPH>
+        <MaLop>201</MaLop>
+        <HoTen>Phạm Văn Hùng</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <Lop>2A</Lop>
+        <SoDienThoai>0934567890</SoDienThoai>
+        <NgaySinh>2017-11-08</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1005</MaHS>
+        <MaPH>505</MaPH>
+        <MaLop>301</MaLop>
+        <HoTen>Hoàng Minh Khang</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <Lop>3A</Lop>
+        <SoDienThoai>0945678901</SoDienThoai>
+        <NgaySinh>2016-08-15</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1006</MaHS>
+        <MaPH>506</MaPH>
+        <MaLop>302</MaLop>
+        <HoTen>Võ Thị Linh</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <Lop>3B</Lop>
+        <SoDienThoai>0956789012</SoDienThoai>
+        <NgaySinh>2016-12-03</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1007</MaHS>
+        <MaPH>507</MaPH>
+        <MaLop>401</MaLop>
+        <HoTen>Đặng Văn Quang</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <Lop>4A</Lop>
+        <SoDienThoai>0967890123</SoDienThoai>
+        <NgaySinh>2015-06-20</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1008</MaHS>
+        <MaPH>508</MaPH>
+        <MaLop>402</MaLop>
+        <HoTen>Bùi Thị Hoa</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <Lop>4B</Lop>
+        <SoDienThoai>0978901234</SoDienThoai>
+        <NgaySinh>2015-09-14</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1009</MaHS>
+        <MaPH>509</MaPH>
+        <MaLop>501</MaLop>
+        <HoTen>Ngô Văn Đạt</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <Lop>5A</Lop>
+        <SoDienThoai>0989012345</SoDienThoai>
+        <NgaySinh>2014-04-25</NgaySinh>
+    </HocSinh>
+    
+    <HocSinh>
+        <MaHS>1010</MaHS>
+        <MaPH>510</MaPH>
+        <MaLop>502</MaLop>
+        <HoTen>Đỗ Thị Lan</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <Lop>5B</Lop>
+        <SoDienThoai>0990123456</SoDienThoai>
+        <NgaySinh>2014-10-12</NgaySinh>
+    </HocSinh>
+
+    <!-- ĐĂNG KÍ LỚP -->
+    <DangKiLop>
+        <MaDangKi>2001</MaDangKi>
+        <MaHocSinh>1001</MaHocSinh>
+        <MaLop>101</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2002</MaDangKi>
+        <MaHocSinh>1002</MaHocSinh>
+        <MaLop>101</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2003</MaDangKi>
+        <MaHocSinh>1003</MaHocSinh>
+        <MaLop>102</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2004</MaDangKi>
+        <MaHocSinh>1004</MaHocSinh>
+        <MaLop>201</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2005</MaDangKi>
+        <MaHocSinh>1005</MaHocSinh>
+        <MaLop>301</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2006</MaDangKi>
+        <MaHocSinh>1006</MaHocSinh>
+        <MaLop>302</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2007</MaDangKi>
+        <MaHocSinh>1007</MaHocSinh>
+        <MaLop>401</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2008</MaDangKi>
+        <MaHocSinh>1008</MaHocSinh>
+        <MaLop>402</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2009</MaDangKi>
+        <MaHocSinh>1009</MaHocSinh>
+        <MaLop>501</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+    
+    <DangKiLop>
+        <MaDangKi>2010</MaDangKi>
+        <MaHocSinh>1010</MaHocSinh>
+        <MaLop>502</MaLop>
+        <MaNienKhoa>2</MaNienKhoa>
+        <HocKi>1</HocKi>
+        <NgayChuyenLop>2024-09-02</NgayChuyenLop>
+    </DangKiLop>
+
+    <!-- GIÁO VIÊN -->
+    <GiaoVien>
+        <MaGV>301</MaGV>
+        <MaNhanVien>GV001</MaNhanVien>
+        <HoTen>Nguyễn Thị Lan Anh</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>45 Đường Võ Văn Tần, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0901111111</SoDienThoai>
+        <TrinhDo>Đại học Sư phạm</TrinhDo>
+    </GiaoVien>
+    
+    <GiaoVien>
+        <MaGV>302</MaGV>
+        <MaNhanVien>GV002</MaNhanVien>
+        <HoTen>Trần Văn Nam</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>78 Đường Lý Tự Trọng, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0902222222</SoDienThoai>
+        <TrinhDo>Đại học Sư phạm</TrinhDo>
+    </GiaoVien>
+    
+    <GiaoVien>
+        <MaGV>303</MaGV>
+        <MaNhanVien>GV003</MaNhanVien>
+        <HoTen>Lê Thị Hương</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>12 Đường Nguyễn Thị Minh Khai, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0903333333</SoDienThoai>
+        <TrinhDo>Thạc sĩ Giáo dục</TrinhDo>
+    </GiaoVien>
+    
+    <GiaoVien>
+        <MaGV>304</MaGV>
+        <MaNhanVien>GV004</MaNhanVien>
+        <HoTen>Phạm Văn Đức</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>89 Đường Lê Đức Thọ, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0904444444</SoDienThoai>
+        <TrinhDo>Đại học Sư phạm</TrinhDo>
+    </GiaoVien>
+    
+    <GiaoVien>
+        <MaGV>305</MaGV>
+        <MaNhanVien>GV005</MaNhanVien>
+        <HoTen>Hoàng Thị Mai</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>56 Đường Nguyễn Văn Quá, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0905555555</SoDienThoai>
+        <TrinhDo>Thạc sĩ Giáo dục</TrinhDo>
+    </GiaoVien>
+    
+    <GiaoVien>
+        <MaGV>306</MaGV>
+        <MaNhanVien>GV006</MaNhanVien>
+        <HoTen>Võ Văn Tài</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>34 Đường Tân Hương, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0906666666</SoDienThoai>
+        <TrinhDo>Đại học Sư phạm</TrinhDo>
+    </GiaoVien>
+    
+    <GiaoVien>
+        <MaGV>307</MaGV>
+        <MaNhanVien>GV007</MaNhanVien>
+        <HoTen>Đặng Thị Hoa</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>78 Đường Lạc Long Quân, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0907777777</SoDienThoai>
+        <TrinhDo>Thạc sĩ Giáo dục</TrinhDo>
+    </GiaoVien>
+    
+    <GiaoVien>
+        <MaGV>308</MaGV>
+        <MaNhanVien>GV008</MaNhanVien>
+        <HoTen>Bùi Văn Sơn</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <DiaChi>23 Đường Phạm Văn Đồng, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0908888888</SoDienThoai>
+        <TrinhDo>Đại học Sư phạm</TrinhDo>
+    </GiaoVien>
+    
+    <GiaoVien>
+        <MaGV>309</MaGV>
+        <MaNhanVien>GV009</MaNhanVien>
+        <HoTen>Ngô Thị Lan</HoTen>
+        <GioiTinh>Nữ</GioiTinh>
+        <DiaChi>45 Đường Nguyễn Thị Thập, Quận Ninh Kiều, Cần Thơ</DiaChi>
+        <SoDienThoai>0909999999</SoDienThoai>
+        <TrinhDo>Thạc sĩ Giáo dục</TrinhDo>
+    </GiaoVien>
+
+    <!-- PHÂN CÔNG GIÁO VIÊN -->
+    <PhanCongGV>
+        <MaPhanCong>4001</MaPhanCong>
+        <MaLop>101</MaLop>
+        <MaGV>301</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4002</MaPhanCong>
+        <MaLop>102</MaLop>
+        <MaGV>302</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4003</MaPhanCong>
+        <MaLop>201</MaLop>
+        <MaGV>303</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4004</MaPhanCong>
+        <MaLop>202</MaLop>
+        <MaGV>301</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4005</MaPhanCong>
+        <MaLop>301</MaLop>
+        <MaGV>304</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4006</MaPhanCong>
+        <MaLop>302</MaLop>
+        <MaGV>305</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4007</MaPhanCong>
+        <MaLop>401</MaLop>
+        <MaGV>306</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4008</MaPhanCong>
+        <MaLop>402</MaLop>
+        <MaGV>307</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4009</MaPhanCong>
+        <MaLop>501</MaLop>
+        <MaGV>308</MaGV>
+    </PhanCongGV>
+    
+    <PhanCongGV>
+        <MaPhanCong>4010</MaPhanCong>
+        <MaLop>502</MaLop>
+        <MaGV>309</MaGV>
+    </PhanCongGV>
+</TruongHoc>

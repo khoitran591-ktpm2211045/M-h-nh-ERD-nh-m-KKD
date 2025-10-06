@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="http://www.truonghoc.edu.vn" 
+           xmlns:truong="http://www.truonghoc.edu.vn" 
+           elementFormDefault="qualified">
+
+    <!-- ROOT ELEMENT -->
+    <xs:element name="TruongHoc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NienKhoa" type="truong:NienKhoaType" maxOccurs="unbounded"/>
+                <xs:element name="KhoiLop" type="truong:KhoiLopType" maxOccurs="unbounded"/>
+                <xs:element name="LopHoc" type="truong:LopHocType" maxOccurs="unbounded"/>
+                <xs:element name="PhuHuynh" type="truong:PhuHuynhType" maxOccurs="unbounded"/>
+                <xs:element name="HocSinh" type="truong:HocSinhType" maxOccurs="unbounded"/>
+                <xs:element name="DangKiLop" type="truong:DangKiLopType" maxOccurs="unbounded"/>
+                <xs:element name="GiaoVien" type="truong:GiaoVienType" maxOccurs="unbounded"/>
+                <xs:element name="PhanCongGV" type="truong:PhanCongGVType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- NIÊN KHÓA -->
+    <xs:complexType name="NienKhoaType">
+        <xs:sequence>
+            <xs:element name="MaNienKhoa" type="xs:positiveInteger"/>
+            <xs:element name="TenNienKhoa" type="xs:string"/>
+            <xs:element name="NamBatDau" type="xs:gYear"/>
+            <xs:element name="NamKetThuc" type="xs:gYear"/>
+            <xs:element name="NgayBatDau" type="xs:date"/>
+            <xs:element name="NgayKetThuc" type="xs:date"/>
+            <xs:element name="MoTa" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+    <!-- KHỐI LỚP -->
+    <xs:complexType name="KhoiLopType">
+        <xs:sequence>
+            <xs:element name="MaKhoi" type="xs:positiveInteger"/>
+            <xs:element name="TenKhoi" type="xs:string"/>
+            <xs:element name="DoTuoi" type="xs:positiveInteger"/>
+            <xs:element name="MoTa" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+    <!-- LỚP HỌC -->
+    <xs:complexType name="LopHocType">
+        <xs:sequence>
+            <xs:element name="MaLop" type="xs:positiveInteger"/>
+            <xs:element name="MaKhoi" type="xs:positiveInteger"/>
+            <xs:element name="TenLop" type="xs:string"/>
+            <xs:element name="SiSo" type="xs:positiveInteger"/>
+            <xs:element name="DanhSachHS" type="xs:string"/>
+            <xs:element name="PhongHoc" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+    <!-- PHỤ HUYNH -->
+    <xs:complexType name="PhuHuynhType">
+        <xs:sequence>
+            <xs:element name="MaPH" type="xs:positiveInteger"/>
+            <xs:element name="HoTen" type="xs:string"/>
+            <xs:element name="GioiTinh">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Nam"/>
+                        <xs:enumeration value="Nữ"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DiaChi" type="xs:string"/>
+            <xs:element name="SoDienThoai">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="0[0-9]{9,10}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+    <!-- HỌC SINH -->
+    <xs:complexType name="HocSinhType">
+        <xs:sequence>
+            <xs:element name="MaHS" type="xs:positiveInteger"/>
+            <xs:element name="MaPH" type="xs:positiveInteger"/>
+            <xs:element name="MaLop" type="xs:positiveInteger"/>
+            <xs:element name="HoTen" type="xs:string"/>
+            <xs:element name="GioiTinh">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Nam"/>
+                        <xs:enumeration value="Nữ"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Lop" type="xs:string"/>
+            <xs:element name="SoDienThoai">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="0[0-9]{9,10}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NgaySinh" type="xs:date"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+    <!-- ĐĂNG KÍ LỚP -->
+    <xs:complexType name="DangKiLopType">
+        <xs:sequence>
+            <xs:element name="MaDangKi" type="xs:positiveInteger"/>
+            <xs:element name="MaHocSinh" type="xs:positiveInteger"/>
+            <xs:element name="MaLop" type="xs:positiveInteger"/>
+            <xs:element name="MaNienKhoa" type="xs:positiveInteger"/>
+            <xs:element name="HocKi">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NgayChuyenLop" type="xs:date"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+    <!-- GIÁO VIÊN -->
+    <xs:complexType name="GiaoVienType">
+        <xs:sequence>
+            <xs:element name="MaGV" type="xs:positiveInteger"/>
+            <xs:element name="MaNhanVien" type="xs:string"/>
+            <xs:element name="HoTen" type="xs:string"/>
+            <xs:element name="GioiTinh">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Nam"/>
+                        <xs:enumeration value="Nữ"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DiaChi" type="xs:string"/>
+            <xs:element name="SoDienThoai">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="0[0-9]{9,10}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TrinhDo" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+    <!-- PHÂN CÔNG GIÁO VIÊN -->
+    <xs:complexType name="PhanCongGVType">
+        <xs:sequence>
+            <xs:element name="MaPhanCong" type="xs:positiveInteger"/>
+            <xs:element name="MaLop" type="xs:positiveInteger"/>
+            <xs:element name="MaGV" type="xs:positiveInteger"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+</xs:schema>
