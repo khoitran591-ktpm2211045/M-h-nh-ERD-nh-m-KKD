@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TruongHoc [
-    <!-- Định nghĩa các thực thể -->
-    
-    <!-- NIÊN KHÓA -->
+<!DOCTYPE TruongMamNon [
+
+    <!-- Gốc của tài liệu -->
+    <!ELEMENT TruongMamNon (NienKhoa+, KhoiLop+, LopHoc+, PhuHuynh+, HocSinh+, GiaoVien+, DangKiLop+, PhanCongGV+)>
+    <!-- 1. NIÊN KHÓA -->
     <!ELEMENT NienKhoa (MaNienKhoa, TenNienKhoa, NamBatDau, NamKetThuc, NgayBatDau, NgayKetThuc, MoTa)>
     <!ELEMENT MaNienKhoa (#PCDATA)>
     <!ELEMENT TenNienKhoa (#PCDATA)>
@@ -11,62 +12,43 @@
     <!ELEMENT NgayBatDau (#PCDATA)>
     <!ELEMENT NgayKetThuc (#PCDATA)>
     <!ELEMENT MoTa (#PCDATA)>
-    
-    <!-- KHỐI LỚP -->
+    <!-- 2. KHỐI LỚP -->
     <!ELEMENT KhoiLop (MaKhoi, TenKhoi, DoTuoi, MoTa)>
     <!ELEMENT MaKhoi (#PCDATA)>
     <!ELEMENT TenKhoi (#PCDATA)>
     <!ELEMENT DoTuoi (#PCDATA)>
-    
-    <!-- LỚP HỌC -->
+    <!ELEMENT MoTa (#PCDATA)>
+    <!-- 3. LỚP HỌC -->
     <!ELEMENT LopHoc (MaLop, MaKhoi, TenLop, SiSo, DanhSachHS, PhongHoc)>
     <!ELEMENT MaLop (#PCDATA)>
     <!ELEMENT TenLop (#PCDATA)>
     <!ELEMENT SiSo (#PCDATA)>
     <!ELEMENT DanhSachHS (#PCDATA)>
     <!ELEMENT PhongHoc (#PCDATA)>
-    
-    <!-- PHỤ HUYNH -->
+    <!-- 4. HỌC SINH -->
+    <!ELEMENT HocSinh (MaHS, MaPH, MaLop, HoTen, GioiTinh, Lop, SoDienThoai, NgaySinh)>
+    <!ELEMENT MaHS (#PCDATA)>
+    <!ELEMENT Lop (#PCDATA)>
+    <!ELEMENT NgaySinh (#PCDATA)>
+    <!-- 5. PHỤ HUYNH -->
     <!ELEMENT PhuHuynh (MaPH, HoTen, GioiTinh, DiaChi, SoDienThoai)>
     <!ELEMENT MaPH (#PCDATA)>
     <!ELEMENT HoTen (#PCDATA)>
     <!ELEMENT GioiTinh (#PCDATA)>
     <!ELEMENT DiaChi (#PCDATA)>
     <!ELEMENT SoDienThoai (#PCDATA)>
-    
-    <!-- HỌC SINH -->
-    <!ELEMENT HocSinh (MaHS, MaPH, MaLop, HoTen, GioiTinh, Lop, SoDienThoai, NgaySinh)>
-    <!ELEMENT MaHS (#PCDATA)>
-    <!ELEMENT Lop (#PCDATA)>
-    <!ELEMENT NgaySinh (#PCDATA)>
-    
-    <!-- ĐĂNG KÍ LỚP -->
-    <!ELEMENT DangKiLop (MaDangKi, MaHocSinh, MaLop, MaNienKhoa, HocKi, NgayChuyenLop)>
-    <!ELEMENT MaDangKi (#PCDATA)>
-    <!ELEMENT MaHocSinh (#PCDATA)>
-    <!ELEMENT HocKi (#PCDATA)>
-    <!ELEMENT NgayChuyenLop (#PCDATA)>
-    
-    <!-- GIÁO VIÊN -->
+    <!-- 6. GIÁO VIÊN -->
     <!ELEMENT GiaoVien (MaGV, MaNhanVien, HoTen, GioiTinh, DiaChi, SoDienThoai, TrinhDo)>
     <!ELEMENT MaGV (#PCDATA)>
     <!ELEMENT MaNhanVien (#PCDATA)>
     <!ELEMENT TrinhDo (#PCDATA)>
-    
-    <!-- PHÂN CÔNG GIÁO VIÊN -->
+    <!-- 7. ĐĂNG KÍ LỚP -->
+    <!ELEMENT DangKiLop (MaDangKi, MaHocSinh, MaLop, HocKi, NgayChuyenLop)>
+    <!ELEMENT MaDangKi (#PCDATA)>
+    <!ELEMENT MaHocSinh (#PCDATA)>
+    <!ELEMENT HocKi (#PCDATA)>
+    <!ELEMENT NgayChuyenLop (#PCDATA)>
+    <!-- 8. PHÂN CÔNG GIÁO VIÊN -->
     <!ELEMENT PhanCongGV (MaPhanCong, MaLop, MaGV)>
     <!ELEMENT MaPhanCong (#PCDATA)>
-    
-    <!-- ROOT ELEMENT -->
-    <!ELEMENT TruongHoc (NienKhoa+, KhoiLop+, LopHoc+, PhuHuynh+, HocSinh+, DangKiLop+, GiaoVien+, PhanCongGV+)>
-    
-    <!-- ATTLIST cho các thuộc tính -->
-    <!ATTLIST NienKhoa id ID #IMPLIED>
-    <!ATTLIST KhoiLop id ID #IMPLIED>
-    <!ATTLIST LopHoc id ID #IMPLIED>
-    <!ATTLIST PhuHuynh id ID #IMPLIED>
-    <!ATTLIST HocSinh id ID #IMPLIED>
-    <!ATTLIST DangKiLop id ID #IMPLIED>
-    <!ATTLIST GiaoVien id ID #IMPLIED>
-    <!ATTLIST PhanCongGV id ID #IMPLIED>
 ]>
