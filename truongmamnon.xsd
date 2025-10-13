@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified">
+
+    <!-- 
+        XSD - XML Schema Definition
+        Hệ thống quản lý trường mầm non
+        Bao gồm: Niên khóa, Khối lớp, Lớp học, Phụ huynh, Học sinh,
+                 Đăng ký lớp, Giáo viên, Phân công giáo viên
+    -->
+
+    <!-- ========== ROOT ELEMENT: TruongMamNon ========== -->
+    <xs:element name="TruongMamNon">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NienKhoa" type="NienKhoaType" maxOccurs="unbounded"/>
+                <xs:element name="KhoiLop" type="KhoiLopType" maxOccurs="unbounded"/>
+                <xs:element name="LopHoc" type="LopHocType" maxOccurs="unbounded"/>
+                <xs:element name="PhuHuynh" type="PhuHuynhType" maxOccurs="unbounded"/>
+                <xs:element name="HocSinh" type="HocSinhType" maxOccurs="unbounded"/>
+                <xs:element name="DangKiLop" type="DangKiLopType" maxOccurs="unbounded"/>
+                <xs:element name="GiaoVien" type="GiaoVienType" maxOccurs="unbounded"/>
+                <xs:element name="PhanCongGV" type="PhanCongGVType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ========== NIÊN KHÓA (1) ========== -->
+    <xs:complexType name="NienKhoaType">
+        <xs:sequence>
+            <xs:element name="MaNienKhoa" type="xs:int"/>
+            <xs:element name="TenNienKhoa" type="xs:string"/>
+            <xs:element name="NamBatDau" type="xs:int"/>
+            <xs:element name="NamKetThuc" type="xs:int"/>
+            <xs:element name="NgayBatDau" type="xs:date"/>
+            <xs:element name="NgayKetThuc" type="xs:date"/>
+            <xs:element name="MoTa" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ========== KHỐI LỚP (2) ========== -->
+    <xs:complexType name="KhoiLopType">
+        <xs:sequence>
+            <xs:element name="MaKhoi" type="xs:int"/>
+            <xs:element name="TenKhoi" type="xs:string"/>
+            <xs:element name="DoTuoi" type="xs:string"/>
+            <xs:element name="MoTa" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ========== LỚP HỌC (3) ========== -->
+    <xs:complexType name="LopHocType">
+        <xs:sequence>
+            <xs:element name="MaLop" type="xs:int"/>
+            <xs:element name="MaKhoi" type="xs:int"/>
+            <xs:element name="TenLop" type="xs:string"/>
+            <xs:element name="SiSo" type="xs:int"/>
+            <xs:element name="DanhSachHS" type="xs:string"/>
+            <xs:element name="PhongHoc" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+        <!-- ========== HỌC SINH (4) ========== -->
+    <xs:complexType name="HocSinhType">
+        <xs:sequence>
+            <xs:element name="MaHS" type="xs:int"/>
+            <xs:element name="MaPH" type="xs:int"/>
+            <xs:element name="MaLop" type="xs:int"/>
+            <xs:element name="HoTen" type="xs:string"/>
+            <xs:element name="GioiTinh" type="GioiTinhType"/>
+            <xs:element name="SoDienThoai" type="SoDienThoaiType"/>
+            <xs:element name="NgaySinh" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ========== PHỤ HUYNH (5) ========== -->
+    <xs:complexType name="PhuHuynhType">
+        <xs:sequence>
+            <xs:element name="MaPH" type="xs:int"/>
+            <xs:element name="HoTen" type="xs:string"/>
+            <xs:element name="GioiTinh" type="GioiTinhType"/>
+            <xs:element name="DiaChi" type="xs:string"/>
+            <xs:element name="SoDienThoai" type="SoDienThoaiType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ========== ĐĂNG KÝ LỚP (6) ========== -->
+    <xs:complexType name="DangKiLopType">
+        <xs:sequence>
+            <xs:element name="MaDangKi" type="xs:int"/>
+            <xs:element name="MaHocSinh" type="xs:int"/>
+            <xs:element name="MaLop" type="xs:int"/>
+            <xs:element name="MaNienKhoa" type="xs:int"/>
+            <xs:element name="HocKi" type="HocKiType"/>
+            <xs:element name="NgayChuyenLop" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ========== GIÁO VIÊN (7) ========== -->
+    <xs:complexType name="GiaoVienType">
+        <xs:sequence>
+            <xs:element name="MaGV" type="xs:int"/>
+            <xs:element name="MaNhanVien" type="xs:int"/>
+            <xs:element name="HoTen" type="xs:string"/>
+            <xs:element name="GioiTinh" type="GioiTinhType"/>
+            <xs:element name="DiaChi" type="xs:string"/>
+            <xs:element name="SoDienThoai" type="SoDienThoaiType"/>
+            <xs:element name="TrinhDo" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ========== PHÂN CÔNG GIÁO VIÊN (8) ========== -->
+    <xs:complexType name="PhanCongGVType">
+        <xs:sequence>
+            <xs:element name="MaPhanCong" type="xs:int"/>
+            <xs:element name="MaLop" type="xs:int"/>
+            <xs:element name="MaGV" type="xs:int"/>
+            <xs:element name="MaNienKhoa" type="xs:int"/>
+            <xs:element name="VaiTro" type="xs:string"/>
+            <xs:element name="NgayBatDau" type="xs:date"/>
+            <xs:element name="NgayKetThuc" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ========== SIMPLE TYPES - RÀNG BUỘC DỮ LIỆU ========== -->
+    
+    <!-- Giới tính: chỉ cho phép "Nam" hoặc "Nữ" -->
+    <xs:simpleType name="GioiTinhType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Nam"/>
+            <xs:enumeration value="Nữ"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Số điện thoại: bắt đầu bằng 0 và có 10 chữ số -->
+    <xs:simpleType name="SoDienThoaiType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="0[0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Học kỳ: chỉ cho phép 1 hoặc 2 -->
+    <xs:simpleType name="HocKiType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
